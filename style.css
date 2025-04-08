@@ -1,0 +1,139 @@
+/********************************/
+/* CUSTOM PROPERTIES */
+/********************************/
+
+:root {
+  /* Colors */
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Shades */
+
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Spacing */
+  --s-4: 0.25rem;
+  --s-8: 0.5rem;
+  --s-12: 0.75rem;
+  --s-13: 0.8125rem;
+  --s-14: 0.875rem;
+  --s-16: 1rem;
+  --s-24: 1.5rem;
+  --s-32: 2rem;
+  --s-40: 2.5rem;
+
+  /* Fonts */
+  --w-1: 500;
+  --w-2: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+} */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header {
+  /* display: inline-block; */
+  width: 100%;
+  max-width: 316px;
+  text-align: center;
+  border: 2px solid var(--grey-500);
+}
+
+h2 {
+  margin-bottom: var(--s-16);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--s-32);
+  border: 2px solid var(--grey-500);
+}
+
+/* main > * + * {
+  margin-bottom: var(--s-32);
+} */
+
+.card {
+  width: 314px;
+  height: 250px;
+}
+
+.teal {
+  border: 4px solid teal;
+}
+
+.red {
+  border: 4px solid red;
+}
+
+.orange {
+  border: 4px solid orange;
+}
+
+.blue {
+  border: 4px solid blue;
+}
+
+.two {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-32);
+}
+
+/* Above 800px */
+@media (min-width: 50rem) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 350px;
+    height: 250px;
+  }
+
+  .two {
+    flex-direction: row;
+  }
+
+  .header {
+    max-width: 540px;
+  }
+}
+
+/* Above 1280px */
+@media (min-width: 80rem) {
+  .cards {
+    flex-direction: row;
+    gap: var(--s-32);
+  }
+
+  .two {
+    flex-direction: column;
+  }
+}
