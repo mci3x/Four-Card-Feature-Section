@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
 /********************************/
 /* CUSTOM PROPERTIES */
 /********************************/
@@ -18,52 +20,135 @@
 
   /* Spacing */
   --s-4: 0.25rem;
+  --s-6: 0.375rem;
   --s-8: 0.5rem;
   --s-12: 0.75rem;
   --s-13: 0.8125rem;
   --s-14: 0.875rem;
+  --s-15: 0.938rem;
   --s-16: 1rem;
+  --s-20: 1.25rem;
   --s-24: 1.5rem;
   --s-32: 2rem;
+  --s-36: 2.25rem;
   --s-40: 2.5rem;
+  --s-60: 3.75rem;
+  --s-74: 4.625rem;
 
   /* Fonts */
-  --w-1: 500;
-  --w-2: 700;
+  --extra-light: 200;
+  --regular: 400;
+  --semibold: 600;
+
+  --shadow: 0 15px 30px -11px rgba(131, 167, 210, 0.5);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-/* body {
+body {
   height: 100vh;
-  display: flex;
+  background-color: #fafafa;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-content: space-between;
-} */
+  justify-content: space-between; */
+}
 
 main {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-evenly;
+  color: var(--grey-500);
+  gap: var(--s-60);
+  padding-top: 3.986vh;
+  padding-bottom: 3.275vh;
 }
 
+/********************************/
+/* UTILITIES */
+/********************************/
+
+/* Text Presets */
+/********************************/
+
+.txt-p--1 {
+  font-size: var(--s-24);
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  font-weight: var(--semibold);
+}
+
+.txt-p--2 {
+  font-size: var(--s-24);
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  font-weight: var(--extra-light);
+}
+
+.txt-p--3 {
+  font-size: var(--s-20);
+  line-height: 1.35;
+  font-weight: var(--semibold);
+}
+
+.txt-p--4 {
+  font-size: var(--s-15);
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  font-weight: var(--regular);
+}
+
+.txt-p--5 {
+  font-size: var(--s-13);
+  line-height: 1.6;
+  font-weight: var(--regular);
+  color: var(--grey-400);
+}
+
+/* Spacing */
+/********************************/
+
+/* .pd--32 {
+  padding: var(--s-32);
+}
+.pd--24 {
+  padding: var(--s-24);
+}
+.pd--16 {
+  padding: var(--s-16);
+} */
+
+.mg-b--16 {
+  margin-bottom: var(--s-16);
+}
+
+.mg-b--32 {
+  margin-bottom: var(--s-32);
+}
+
+.mg-b--60 {
+  margin-bottom: var(--s-60);
+}
+
+/********************************/
+/* ELEMENTS */
+/********************************/
+
 .header {
-  /* display: inline-block; */
   width: 100%;
   max-width: 316px;
   text-align: center;
-  border: 2px solid var(--grey-500);
 }
 
 h2 {
-  margin-bottom: var(--s-16);
+  margin-bottom: var(--s-6);
 }
 
 .cards {
@@ -72,32 +157,37 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: var(--s-32);
-  border: 2px solid var(--grey-500);
 }
-
-/* main > * + * {
-  margin-bottom: var(--s-32);
-} */
 
 .card {
   width: 314px;
   height: 250px;
+  background-color: var(--white);
+  border-radius: 4px 4px;
+  box-shadow: 0 15px 30px -11px rgba(131, 167, 210, 0.5);
+  padding: var(--s-32);
+  display: flex;
+  flex-direction: column;
 }
 
-.teal {
-  border: 4px solid teal;
+.icon {
+  align-self: end;
+}
+
+.cyan {
+  box-shadow: inset 0 4px var(--cyan), var(--shadow);
 }
 
 .red {
-  border: 4px solid red;
+  box-shadow: inset 0 4px var(--red), var(--shadow);
 }
 
 .orange {
-  border: 4px solid orange;
+  box-shadow: inset 0 4px var(--orange), var(--shadow);
 }
 
 .blue {
-  border: 4px solid blue;
+  box-shadow: inset 0 4px var(--blue), var(--shadow);
 }
 
 .two {
@@ -106,15 +196,19 @@ h2 {
   gap: var(--s-32);
 }
 
-/* Above 800px */
-@media (min-width: 50rem) {
-  .cards {
-    flex-direction: column;
+/********************************/
+/* MEDIA QUERIES */
+/********************************/
+
+/* Above 752px */
+@media (min-width: 47rem) {
+  main {
+    gap: var(--s-74);
+    padding: 6.634vh 0;
   }
 
-  .card {
-    width: 350px;
-    height: 250px;
+  .cards {
+    flex-direction: column;
   }
 
   .two {
@@ -124,13 +218,32 @@ h2 {
   .header {
     max-width: 540px;
   }
+
+  .txt-p--1,
+  .txt-p--2 {
+    font-size: var(--s-36);
+  }
+
+  .txt-p--4 {
+    letter-spacing: 0px;
+  }
 }
 
 /* Above 1280px */
 @media (min-width: 80rem) {
+  main {
+    padding-top: 9.913vh;
+    padding-bottom: 15.844vh;
+  }
+
   .cards {
     flex-direction: row;
     gap: var(--s-32);
+  }
+
+  .card {
+    width: 350px;
+    height: 250px;
   }
 
   .two {
