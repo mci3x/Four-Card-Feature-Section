@@ -48,27 +48,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: var(--grey-500);
+  line-height: 1.4;
 }
 
 body {
   height: 100vh;
   background-color: #fafafa;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between; */
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--grey-500);
-  gap: var(--s-60);
   padding-top: 3.986vh;
   padding-bottom: 3.275vh;
+  gap: var(--s-60);
 }
 
 /********************************/
@@ -80,14 +72,12 @@ main {
 
 .txt-p--1 {
   font-size: var(--s-24);
-  line-height: 1.4;
   letter-spacing: 0.25px;
   font-weight: var(--semibold);
 }
 
 .txt-p--2 {
   font-size: var(--s-24);
-  line-height: 1.4;
   letter-spacing: 0.25px;
   font-weight: var(--extra-light);
 }
@@ -100,7 +90,6 @@ main {
 
 .txt-p--4 {
   font-size: var(--s-15);
-  line-height: 1.4;
   letter-spacing: 0.1px;
   font-weight: var(--regular);
 }
@@ -124,6 +113,9 @@ main {
 .pd--16 {
   padding: var(--s-16);
 } */
+.mg-b--6 {
+  margin-bottom: var(--s-6);
+}
 
 .mg-b--16 {
   margin-bottom: var(--s-16);
@@ -137,6 +129,20 @@ main {
   margin-bottom: var(--s-60);
 }
 
+.gap {
+  gap: var(--s-32);
+}
+
+/* Layout */
+/********************************/
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /********************************/
 /* ELEMENTS */
 /********************************/
@@ -147,18 +153,6 @@ main {
   text-align: center;
 }
 
-h2 {
-  margin-bottom: var(--s-6);
-}
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--s-32);
-}
-
 .card {
   width: 314px;
   height: 250px;
@@ -166,8 +160,7 @@ h2 {
   border-radius: 4px 4px;
   box-shadow: 0 15px 30px -11px rgba(131, 167, 210, 0.5);
   padding: var(--s-32);
-  display: flex;
-  flex-direction: column;
+  align-items: flex-start;
 }
 
 .icon {
@@ -190,12 +183,6 @@ h2 {
   box-shadow: inset 0 4px var(--blue), var(--shadow);
 }
 
-.two {
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-32);
-}
-
 /********************************/
 /* MEDIA QUERIES */
 /********************************/
@@ -205,10 +192,6 @@ h2 {
   main {
     gap: var(--s-74);
     padding: 6.634vh 0;
-  }
-
-  .cards {
-    flex-direction: column;
   }
 
   .two {
@@ -238,7 +221,6 @@ h2 {
 
   .cards {
     flex-direction: row;
-    gap: var(--s-32);
   }
 
   .card {
