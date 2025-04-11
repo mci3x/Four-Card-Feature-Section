@@ -1,4 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins_ExtraLight_200_latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins_Regular_400_latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins_SemiBold_600_latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
 
 /********************************/
 /* CUSTOM PROPERTIES */
@@ -19,19 +41,19 @@
   --white: hsl(0, 0%, 100%);
 
   /* Spacing */
-  --s-4: 0.25rem;
+  /* --s-4: 0.25rem; */
   --s-6: 0.375rem;
-  --s-8: 0.5rem;
-  --s-12: 0.75rem;
+  /* --s-8: 0.5rem; */
+  /* --s-12: 0.75rem; */
   --s-13: 0.8125rem;
-  --s-14: 0.875rem;
+  /* --s-14: 0.875rem; */
   --s-15: 0.938rem;
   --s-16: 1rem;
   --s-20: 1.25rem;
   --s-24: 1.5rem;
   --s-32: 2rem;
   --s-36: 2.25rem;
-  --s-40: 2.5rem;
+  /* --s-40: 2.5rem; */
   --s-60: 3.75rem;
   --s-74: 4.625rem;
 
@@ -104,15 +126,10 @@ main {
 /* Spacing */
 /********************************/
 
-/* .pd--32 {
+.pd--32 {
   padding: var(--s-32);
 }
-.pd--24 {
-  padding: var(--s-24);
-}
-.pd--16 {
-  padding: var(--s-16);
-} */
+
 .mg-b--6 {
   margin-bottom: var(--s-6);
 }
@@ -158,8 +175,6 @@ main {
   height: 250px;
   background-color: var(--white);
   border-radius: 4px 4px;
-  box-shadow: 0 15px 30px -11px rgba(131, 167, 210, 0.5);
-  padding: var(--s-32);
   align-items: flex-start;
 }
 
@@ -232,3 +247,11 @@ main {
     flex-direction: column;
   }
 }
+
+/* ARIA */
+
+/* Delete unused stuff */
+
+/* px -> rem */
+
+/* further optimizing */
