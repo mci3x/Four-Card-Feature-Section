@@ -79,10 +79,6 @@
   line-height: 1.4;
 }
 
-body {
-  max-height: 100vh;
-}
-
 main {
   padding-top: 3.986vh;
   gap: var(--s-60);
