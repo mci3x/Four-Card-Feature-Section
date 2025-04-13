@@ -38,24 +38,25 @@
 
   --grey-500: hsl(234, 12%, 34%);
   --grey-400: hsl(212, 6%, 44%);
+  --background: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
 
   /* Spacing */
-  /* --s-4: 0.25rem; */
   --s-6: 0.375rem;
-  /* --s-8: 0.5rem; */
-  /* --s-12: 0.75rem; */
   --s-13: 0.8125rem;
-  /* --s-14: 0.875rem; */
   --s-15: 0.938rem;
   --s-16: 1rem;
   --s-20: 1.25rem;
   --s-24: 1.5rem;
   --s-32: 2rem;
   --s-36: 2.25rem;
-  /* --s-40: 2.5rem; */
   --s-60: 3.75rem;
   --s-74: 4.625rem;
+  --s-250: 15.625rem;
+  --s-314: 19.625rem;
+  --s-316: 19.75rem;
+  --s-350: 21.875rem;
+  --s-540: 33.75rem;
 
   /* Fonts */
   --extra-light: 200;
@@ -64,6 +65,10 @@
 
   --shadow: 0 15px 30px -11px rgba(131, 167, 210, 0.5);
 }
+
+/********************************/
+/* GENERAL */
+/********************************/
 
 * {
   margin: 0;
@@ -76,12 +81,10 @@
 
 body {
   height: 100vh;
-  background-color: #fafafa;
 }
 
 main {
   padding-top: 3.986vh;
-  padding-bottom: 3.275vh;
   gap: var(--s-60);
 }
 
@@ -92,22 +95,24 @@ main {
 /* Text Presets */
 /********************************/
 
-.txt-p--1 {
+.txt-p--1,
+.txt-p--2 {
   font-size: var(--s-24);
   letter-spacing: 0.25px;
+}
+
+.txt-p--1,
+.txt-p--3 {
   font-weight: var(--semibold);
 }
 
 .txt-p--2 {
-  font-size: var(--s-24);
-  letter-spacing: 0.25px;
   font-weight: var(--extra-light);
 }
 
 .txt-p--3 {
   font-size: var(--s-20);
   line-height: 1.35;
-  font-weight: var(--semibold);
 }
 
 .txt-p--4 {
@@ -166,13 +171,13 @@ main {
 
 .header {
   width: 100%;
-  max-width: 316px;
+  max-width: var(--s-316);
   text-align: center;
 }
 
 .card {
-  width: 314px;
-  height: 250px;
+  width: var(--s-314);
+  height: var(--s-250);
   background-color: var(--white);
   border-radius: 4px 4px;
   align-items: flex-start;
@@ -206,7 +211,7 @@ main {
 @media (min-width: 47rem) {
   main {
     gap: var(--s-74);
-    padding: 6.634vh 0;
+    padding-top: 6.634vh;
   }
 
   .two {
@@ -214,7 +219,7 @@ main {
   }
 
   .header {
-    max-width: 540px;
+    max-width: var(--s-540);
   }
 
   .txt-p--1,
@@ -231,7 +236,6 @@ main {
 @media (min-width: 80rem) {
   main {
     padding-top: 9.913vh;
-    padding-bottom: 15.844vh;
   }
 
   .cards {
@@ -239,19 +243,11 @@ main {
   }
 
   .card {
-    width: 350px;
-    height: 250px;
+    width: var(--s-350);
+    height: var(--s-250);
   }
 
   .two {
     flex-direction: column;
   }
 }
-
-/* ARIA */
-
-/* Delete unused stuff */
-
-/* px -> rem */
-
-/* further optimizing */
