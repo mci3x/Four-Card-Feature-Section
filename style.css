@@ -54,6 +54,7 @@
   --s-60: 3.75rem;
   --s-80: 5rem;
   --s-74: 4.625rem;
+  --s-102: 6.375rem;
   --s-163: 10.188rem;
   --s-250: 15.625rem;
   --s-314: 19.625rem;
@@ -211,9 +212,8 @@ main {
 @media (min-width: 47rem) {
   main {
     gap: var(--s-74);
-    /* padding-top: 6.634vh; */
-    padding-top: 5rem;
-    margin-bottom: 5rem;
+    padding-top: var(--s-80);
+    margin-bottom: var(--s-80);
   }
 
   .two {
@@ -237,8 +237,8 @@ main {
 /* Above 1280px */
 @media (min-width: 80rem) {
   main {
-    padding-top: 9.913vh;
-    margin-bottom: 10.188rem;
+    padding-top: var(--s-102);
+    margin-bottom: var(--s-163);
   }
 
   .cards {
